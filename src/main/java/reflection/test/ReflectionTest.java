@@ -1,7 +1,9 @@
 package reflection.test;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * @Author Chuanan YANG
@@ -11,7 +13,9 @@ import java.lang.reflect.InvocationTargetException;
  */
 public class ReflectionTest {
 
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException {
+    public static void main(String[] args) throws ClassNotFoundException,
+            IllegalAccessException, InstantiationException, NoSuchMethodException,
+            InvocationTargetException, NoSuchFieldException {
 
         // 生成一个User对象，一个Class对象
         User user = new User();
@@ -43,6 +47,21 @@ public class ReflectionTest {
         Constructor constructor2 = userClassOne.getDeclaredConstructor(String.class,String.class);
 
         // 通过反射获取属性
+        Field field = userClassOne.getField("name");
+        field.setAccessible(true);
+        field.getName();
+        field.set(user,"Chuanan");
+        Field field1 = userClassOne.getDeclaredField("name");
+        Field[] fields = userClassOne.getFields();
+        Field[] fields1 = userClassOne.getDeclaredFields();
+
+        // 获取成员方法并调用
+        Method[] methods = userClassOne.getMethods();
+        Method[] methods1 = userClassOne.getDeclaredMethods();
+        Method method = userClassOne.getMethod("showPrivate", String.class);
+        Method method1 = userClassOne.getMethod("showPublic");
+        method.invoke(user,"hello Chuanan");
+        method1.invoke(user);
 
 
 

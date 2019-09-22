@@ -18,4 +18,12 @@ public class User {
     private String name;
     private String sex;
 
+    private void showPrivate(String hello){
+        System.out.println(this.name+this.sex+hello);
+    }
+
+    public void showPublic(){
+        System.out.println("name and sex is:"+this.name+this.sex);
+    }
+
 }
