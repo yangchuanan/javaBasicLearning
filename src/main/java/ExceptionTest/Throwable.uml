@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.lang.Throwable</OriginalElement>
+  <nodes>
+    <node x="277.75" y="80.0">java.lang.Throwable</node>
+    <node x="420.82142857142856" y="160.0">java.lang.Error</node>
+    <node x="0.0" y="240.0">java.lang.ClassNotFoundException</node>
+    <node x="213.0" y="240.0">ExceptionTest.BusinessException</node>
+    <node x="142.82142857142858" y="160.0">java.lang.Exception</node>
+    <node x="269.82142857142856" y="157.0">com.sun.xml.internal.bind.v2.util.StackRecorder</node>
+    <node x="275.75" y="0.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ExceptionTest.BusinessException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="290.0" y="215.0" />
+      <point x="221.57142857142858" y="215.0" />
+      <point x="26.25" y="15.0" />
+    </edge>
+    <edge source="java.lang.Error" target="java.lang.Throwable">
+      <point x="0.0" y="-15.0" />
+      <point x="458.82142857142856" y="135.0" />
+      <point x="368.58333333333337" y="135.0" />
+      <point x="36.33333333333334" y="15.0" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="0.0" y="-15.0" />
+      <point x="195.32142857142858" y="135.0" />
+      <point x="295.91666666666663" y="135.0" />
+      <point x="-36.33333333333334" y="15.0" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="com.sun.xml.internal.bind.v2.util.StackRecorder" target="java.lang.Throwable">
+      <point x="0.0" y="-15.0" />
+      <point x="334.32142857142856" y="135.0" />
+      <point x="332.25" y="135.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="java.lang.ClassNotFoundException" target="java.lang.Exception">
+      <point x="0.0" y="-15.0" />
+      <point x="96.5" y="215.0" />
+      <point x="169.07142857142858" y="215.0" />
+      <point x="-26.25" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="56.5" y="66.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
