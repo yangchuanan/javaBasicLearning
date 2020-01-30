@@ -1,7 +1,6 @@
 package rxjava.test;
 
 import io.reactivex.Observable;
-import io.reactivex.Observer;
 import io.reactivex.schedulers.TestScheduler;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -76,6 +75,28 @@ public class RxjavaTest0 {
                 .toList()
                 .subscribe(System.out::println,System.out::println);
 
+        scheduler.advanceTimeBy(30,TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void Test6(){
+        TestScheduler scheduler = new TestScheduler();
+        Observable<String> abc=Observable.fromArray("a","b","c");
+        abc.flatMap(x-> Observable.just(x+"f"))
+                .delay(new Random().nextInt(5), TimeUnit.SECONDS,scheduler)
+                .toList()
+                .subscribe(System.out::println,System.out::println);
+        scheduler.advanceTimeBy(30,TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void Test7(){
+        TestScheduler scheduler = new TestScheduler();
+        Observable<String> abc=Observable.fromArray("a","b","c");
+        abc.switchMap(x-> Observable.just(x+"s"))
+                .delay(new Random().nextInt(5), TimeUnit.SECONDS,scheduler)
+                .toList()
+                .subscribe(System.out::println,System.out::println);
         scheduler.advanceTimeBy(30,TimeUnit.SECONDS);
     }
 
