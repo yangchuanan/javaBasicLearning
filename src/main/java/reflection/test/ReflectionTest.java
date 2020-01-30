@@ -63,10 +63,5 @@ public class ReflectionTest {
         method.invoke(user,"hello Chuanan");
         method1.invoke(user);
 
-
-
-
-
-
     }
 }
